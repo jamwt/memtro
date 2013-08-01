@@ -1,0 +1,21 @@
+message Get {
+    required string key = 1;
+}
+
+message GetResponse {
+    optional bytes value = 1;
+}
+
+message Put {
+    required string key = 1;
+    required bytes value = 2;
+}
+
+message PutResponse {
+    required bool is_new = 1;
+}
+
+message MemtroRequest {
+    optional Get get = 1;
+    optional Put put = 2;
+}
